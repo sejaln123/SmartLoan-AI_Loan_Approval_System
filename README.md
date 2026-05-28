@@ -37,10 +37,12 @@ Python
 - Scikit-learn
 - Matplotlib
 - Seaborn
+- Joblib
+- Label Encoder
 
 ### Model Used: 
 - Logistic Regression
-- K Nearest Neighbor
+- Random Forest
 - Naive Bayes Classifier
 
 
@@ -62,9 +64,15 @@ Python
 
 
 ## Results
-Best Model selected from the above 3 models - Naive Bayes Classifier.
 
-Model Accuracy: 86% 
+- Logistic Regression : 74.5%
+- Random Forest       : 91.5%
+- Naive Bayes         : 73.0%
+
+Best Model selected from the above 3 models - Random Forest
+
+
+Model Accuracy: 91.5%
 
 - Reduced manual effort in loan approval
 - Faster and consistent decision-making
@@ -72,13 +80,18 @@ Model Accuracy: 86%
 ## Project Structure
 SmartLoan AI_Loan_Approval_System
 
-- ├── data/                 # Dataset files
+- ├── data/                  # Dataset files
 - ├── notebooks/            # Jupyter notebooks
 - └── README.md             # Project documentation
+- └── accuracies            # accuracies of model
+- └── app.py                # Streamlit UI code
+- └── EDA.ipynb             # Exploratory data analysis
+- └── encoders.json         # Encoders for categorical columns
+- └── requirements.txt      
+- └── train_model.py        # training model 
 
 
-## Future Enhancements
-- Deploy using Streamlit / Web App
+## Future Enhancement:
 - Add interactive dashboard
 - Use advanced ML models (XGBoost, Neural Networks)
 - Improve fairness and bias detection
