@@ -1,0 +1,6 @@
+
+MODEL ACCURACIES
+
+Logistic Regression : 74.5%
+Random Forest       : 91.5%
+Naive Bayes         : 73.0%
