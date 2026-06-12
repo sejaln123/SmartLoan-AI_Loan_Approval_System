@@ -1,9 +1,9 @@
-# CreditWise AI – Loan Approval System
-CreditWise AI is a Machine Learning-based loan approval system designed to predict whether a loan application should be approved or rejected based on applicant details.
+# SmartLoan AI – Loan Approval System
+SmartLoan AI is a Machine Learning-based loan approval system designed to predict whether a loan application should be approved or rejected based on applicant details.
 
 ## Project Overview
 
-CreditWise AI is a Machine Learning-based system that predicts whether a loan application should be approved or rejected based on applicant details such as income, credit history, and other financial attributes.
+SmartLoan AI is a Machine Learning-based system that predicts whether a loan application should be approved or rejected based on applicant details such as income, credit history, and other financial attributes.
 
 This project aims to automate the loan approval process, making it faster, more consistent, and data-driven.
 
