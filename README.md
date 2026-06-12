@@ -76,6 +76,10 @@ Model Accuracy: 91.5%
 
 - Reduced manual effort in loan approval
 - Faster and consistent decision-making
+
+🎥 Watch the Demo-----
+- Approval Case - https://drive.google.com/file/d/1M3FisAaK51XFRjp4SOgrS2_SPbhdOz-c/view?usp=sharing
+- Rejection Case - https://drive.google.com/file/d/1BqMYi5aYM6Q-a0niEanms52nWWLcnQ3l/view?usp=sharing
   
 ## Project Structure
 SmartLoan AI_Loan_Approval_System
