@@ -9,6 +9,7 @@ model = joblib.load("loan_model.pkl")
 # Load encoders
 with open("encoders.json", "r") as f:
     encoders = json.load(f)
+    print(encoders)
 
 st.set_page_config(page_title="Loan Approval Prediction")
 
@@ -21,14 +22,14 @@ coapplicant_income = st.number_input("Coapplicant Income", min_value=0)
 
 employment_status = st.selectbox(
     "Employment Status",
-    encoders["Employment_Status"]["classes"]
+    encoders["Employment_Status"]
 )
 
 age = st.number_input("Age", min_value=18, max_value=100)
 
 marital_status = st.selectbox(
     "Marital Status",
-    encoders["Marital_Status"]["classes"]
+    encoders["Marital_Status"]
 )
 
 dependents = st.number_input("Dependents", min_value=0, max_value=10)
@@ -70,45 +71,45 @@ loan_term = st.number_input(
 
 loan_purpose = st.selectbox(
     "Loan Purpose",
-    encoders["Loan_Purpose"]["classes"]
+    encoders["Loan_Purpose"]
 )
 
 property_area = st.selectbox(
     "Property Area",
-    encoders["Property_Area"]["classes"]
+    encoders["Property_Area"]
 )
 
 education_level = st.selectbox(
     "Education Level",
-    encoders["Education_Level"]["classes"]
+    encoders["Education_Level"]
 )
 
 gender = st.selectbox(
     "Gender",
-    encoders["Gender"]["classes"]
+    encoders["Gender"]
 )
 
 employer_category = st.selectbox(
     "Employer Category",
-    encoders["Employer_Category"]["classes"]
+    encoders["Employer_Category"]
 )
 
 if st.button("Predict Loan Status"):
 
     # Encode categorical inputs
-    employment_status_encoded = encoders["Employment_Status"]["classes"].index(employment_status)
+    employment_status_encoded = encoders["Employment_Status"].index(employment_status)
 
-    marital_status_encoded = encoders["Marital_Status"]["classes"].index(marital_status)
+    marital_status_encoded = encoders["Marital_Status"].index(marital_status)
 
-    loan_purpose_encoded = encoders["Loan_Purpose"]["classes"].index(loan_purpose)
+    loan_purpose_encoded = encoders["Loan_Purpose"].index(loan_purpose)
 
-    property_area_encoded = encoders["Property_Area"]["classes"].index(property_area)
+    property_area_encoded = encoders["Property_Area"].index(property_area)
 
-    education_level_encoded = encoders["Education_Level"]["classes"].index(education_level)
+    education_level_encoded = encoders["Education_Level"].index(education_level)
 
-    gender_encoded = encoders["Gender"]["classes"].index(gender)
+    gender_encoded = encoders["Gender"].index(gender)
 
-    employer_category_encoded = encoders["Employer_Category"]["classes"].index(employer_category)
+    employer_category_encoded = encoders["Employer_Category"].index(employer_category)
 
     # Create dataframe
     input_data = pd.DataFrame([[
